@@ -2,7 +2,9 @@
 
 After confirming the ADB connection, the next step is to collect basic information about the Android device. This gives us the device model, Android version, security patch level, storage, battery state, and network configuration before starting deeper analysis.
 
-## Device Information
+---
+
+## 1. Device Information
 
 Manufacturer:
 
@@ -30,7 +32,7 @@ adb> getprop ro.product.name
 
 ---
 
-## Android Information
+## 3. Android Information
 
 Android version:
 
@@ -64,7 +66,7 @@ adb> getprop ro.build.fingerprint
 
 ---
 
-## System Information
+## 4. System Information
 
 Get all system properties:
 
@@ -92,7 +94,7 @@ adb> date
 
 ---
 
-## Battery Status
+## 5. Battery Status
 
 Check the current battery state:
 
@@ -122,7 +124,7 @@ Battery analysis will be covered in more detail in the battery forensics section
 
 ---
 
-## Storage
+## 6. Storage
 
 Check available storage:
 
@@ -138,7 +140,7 @@ adb> df -h /data
 
 ---
 
-## Network Information
+## 7. Network Information
 
 List network interfaces:
 
@@ -162,4 +164,74 @@ Check HTTP proxy:
 
 ```bash
 adb> settings get global http_proxy
+```
+
+---
+
+## 8. Evidence Collection
+
+Create the evidence directory:
+
+```bash
+mkdir -p evidence/device
+```
+
+Collect device information:
+
+```bash
+$ adb shell getprop > evidence/device/getprop.txt
+```
+
+Collect kernel information:
+
+```bash
+$ adb shell uname -a > evidence/device/uname.txt
+```
+
+Collect device uptime:
+
+```bash
+$ adb shell uptime > evidence/device/uptime.txt
+```
+
+Collect device date and time:
+
+```bash
+$ adb shell date > evidence/device/date.txt
+```
+
+Collect battery information:
+
+```bash
+$ adb shell dumpsys battery > evidence/device/battery.txt
+```
+
+Collect storage information:
+
+```bash
+$ adb shell df -h > evidence/device/storage.txt
+```
+
+Collect network interfaces:
+
+```bash
+$ adb shell ip addr > evidence/device/ip_addr.txt
+```
+
+Collect routing information:
+
+```bash
+$ adb shell ip route > evidence/device/ip_route.txt
+```
+
+Collect DNS configuration:
+
+```bash
+$ adb shell getprop | grep -i dns > evidence/device/dns.txt
+```
+
+Collect the HTTP proxy configuration:
+
+```bash
+$ adb shell settings get global http_proxy > evidence/device/http_proxy.txt
 ```

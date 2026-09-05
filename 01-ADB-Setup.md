@@ -2,7 +2,9 @@
 
 **ADB (Android Debug Bridge)** is the main interface we will use to communicate with the Android device from Kali Linux. Before starting the forensic collection, we need to install ADB and make sure the device is correctly detected.
 
-## Install ADB
+---
+
+## 1. Install ADB
 
 Update the Kali package list:
 
@@ -31,7 +33,7 @@ Version 35.x.x
 
 ---
 
-## Enable USB Debugging
+## 2. Enable USB Debugging
 
 ADB requires USB debugging to be enabled on the Android device.
 
@@ -59,7 +61,7 @@ Enable USB debugging.
 
 ---
 
-## Connect the Android Device
+## 3. Connect the Android Device
 
 Connect the phone to Kali Linux using a USB data cable.
 
@@ -84,7 +86,7 @@ R5CY80SG38    device
 
 ---
 
-## Test the ADB Connection
+## 4. Test the ADB Connection
 
 Once the device appears as device, test the shell:
 
@@ -113,7 +115,7 @@ $ adb shell whoami
 
 ---
 
-## Test Device Information
+## 5. Test Device Information
 
 Check the manufacturer:
 
