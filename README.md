@@ -1,5 +1,7 @@
 # Android Forensics with ADB
 
+![Banner Image](Banner-Image.png)
+
 A practical Android forensics and incident response project focused on forensic triage, artifact collection, and security analysis using **Android Debug Bridge (ADB)**.
 
 The project provides a structured methodology, commands, and automation scripts for investigating Android devices from a forensic and defensive perspective.
