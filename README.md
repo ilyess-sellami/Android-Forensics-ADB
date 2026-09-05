@@ -59,6 +59,7 @@ This project aims to provide a practical workflow for:
     * Wireshark
 
 ### Android Device
+
 * Android device
 * USB debugging enabled
 * Authorized ADB connection
