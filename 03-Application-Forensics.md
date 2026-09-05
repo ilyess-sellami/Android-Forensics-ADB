@@ -43,7 +43,7 @@ package:com.whatsapp
 You can also search for potentially interesting package names:
 
 ```bash
-adb shell pm list packages | grep -Ei "vpn|prshelloxy|remote|monitor|spy|admin"
+$ adb shell pm list packages | grep -Ei "vpn|prshelloxy|remote|monitor|spy|admin"
 ```
 
 > **Note:** A suspicious package name does not automatically mean that the application is malicious. Further analysis is required.
@@ -313,19 +313,19 @@ package:/data/app/~~abc123==/com.example.app-xyz/base.apk
 Then attempt to pull the APK:
 
 ```bash
-adb pull /data/app/~~abc123==/com.example.app-xyz/base.apk evidence/apps/com.example.app.apk
+$ adb pull /data/app/~~abc123==/com.example.app-xyz/base.apk evidence/apps/com.example.app.apk
 ```
 
 If the APK is accessible, calculate its SHA-256 hash:
 
 ```bash
-sha256sum evidence/apps/com.example.app.apk
+$ sha256sum evidence/apps/com.example.app.apk
 ```
 
 Save the hash:
 
 ```bash
-sha256sum evidence/apps/com.example.app.apk > evidence/apps/com.example.app.apk.sha256
+$ sha256sum evidence/apps/com.example.app.apk > evidence/apps/com.example.app.apk.sha256
 ```
 
 The hash can be used to verify the integrity of the acquired APK.
@@ -337,7 +337,7 @@ The hash can be used to verify the integrity of the acquired APK.
 Create the application evidence directory:
 
 ```bash
-mkdir -p evidence/apps
+$ mkdir -p evidence/apps
 ```
 
 Collect the package list:

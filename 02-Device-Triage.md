@@ -173,7 +173,7 @@ adb> settings get global http_proxy
 Create the evidence directory:
 
 ```bash
-mkdir -p evidence/device
+$ mkdir -p evidence/device
 ```
 
 Collect device information:
