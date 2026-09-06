@@ -15,7 +15,7 @@ adb> ps -A
 Save the result:
 
 ```bash
-mkdir -p evidence/processes
+$ mkdir -p evidence/processes
 
 adb shell ps -A > evidence/processes/processes.txt
 ```
@@ -122,8 +122,7 @@ This provides information about the application's memory usage.
 Save the result:
 
 ```bash
-adb shell dumpsys meminfo com.example.app \
-> evidence/processes/com.example.app_meminfo.txt
+adb shell dumpsys meminfo com.example.app evidence/processes/com.example.app_meminfo.txt
 ```
 
 Unexpected memory consumption can be useful when investigating applications performing intensive background activity.
@@ -168,8 +167,7 @@ adb> top -n 1 | grep com.example.app
 Save the result:
 
 ```bash
-adb shell top -n 1 \
-> evidence/processes/top.txt
+adb shell top -n 1 evidence/processes/top.txt
 ```
 
 High CPU usage does not automatically indicate malicious activity, but it can be useful when correlated with battery consumption, network activity, or suspicious application behavior.
@@ -243,40 +241,35 @@ adb> ss -tunap
 Create the evidence directory:
 
 ```bash
-mkdir -p evidence/processes
+$ mkdir -p evidence/processes
 ```
 
 Collect running processes:
 
 ```bash
-adb shell ps -A \
-> evidence/processes/processes.txt
+adb shell ps -A > evidence/processes/processes.txt
 ```
 
 Collect process and activity information:
 
 ```bash
-adb shell dumpsys activity processes \
-> evidence/processes/activity_processes.txt
+adb shell dumpsys activity processes evidence/processes/activity_processes.txt
 ```
 
 Collect running services:
 
 ```bash
-adb shell dumpsys activity services \
-> evidence/processes/services.txt
+adb shell dumpsys activity services evidence/processes/services.txt
 ```
 
 Collect CPU information:
 
 ```bash
-adb shell top -n 1 \
-> evidence/processes/top.txt
+adb shell top -n 1 evidence/processes/top.txt
 ```
 
 Collect network statistics:
 
 ```bash
-adb shell dumpsys netstats \
-> evidence/processes/netstats.txt
+adb shell dumpsys netstats evidence/processes/netstats.txt
 ```
