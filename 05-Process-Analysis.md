@@ -253,23 +253,23 @@ adb> ps -A > evidence/processes/processes.txt
 Collect process and activity information:
 
 ```bash
-adb> dumpsys activity processes evidence/processes/activity_processes.txt
+adb> dumpsys activity processes > evidence/processes/activity_processes.txt
 ```
 
 Collect running services:
 
 ```bash
-adb> dumpsys activity services evidence/processes/services.txt
+adb> dumpsys activity services > evidence/processes/services.txt
 ```
 
 Collect CPU information:
 
 ```bash
-adb> top -n 1 evidence/processes/top.txt
+adb> top -n 1 > evidence/processes/top.txt
 ```
 
 Collect network statistics:
 
 ```bash
-adb> dumpsys netstats evidence/processes/netstats.txt
+adb> dumpsys netstats > evidence/processes/netstats.txt
 ```

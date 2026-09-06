@@ -218,29 +218,29 @@ $ mkdir -p evidence/permissions
 Collect all available permissions:
 
 ```bash
-adb shell pm list permissions -g evidence/permissions/all_permissions.txt
+adb> pm list permissions -g > evidence/permissions/all_permissions.txt
 ```
 
 For a suspicious application:
 
 ```bash
-adb shell dumpsys package com.example.app evidence/permissions/com.example.app.txt
+adb> dumpsys package com.example.app > evidence/permissions/com.example.app.txt
 ```
 
 Collect AppOps information:
 
 ```bash
-adb shell cmd appops get com.example.app evidence/permissions/com.example.app_appops.txt
+adb> cmd appops get com.example.app > evidence/permissions/com.example.app_appops.txt
 ```
 
 Collect accessibility configuration:
 
 ```bash
-adb shell settings list secure | grep -i accessibility evidence/permissions/accessibility.txt
+adb> settings list secure | grep -i accessibility > evidence/permissions/accessibility.txt
 ```
 
 Collect device policy information:
 
 ```bash
-adb shell dumpsys device_policy evidence/permissions/device_policy.txt
+adb> dumpsys device_policy > evidence/permissions/device_policy.txt
 ```

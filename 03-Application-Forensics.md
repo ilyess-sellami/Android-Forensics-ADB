@@ -343,33 +343,33 @@ $ mkdir -p evidence/apps
 Collect the package list:
 
 ```bash
-$ adb shell pm list packages  evidence/apps/packages.txt
+adb> pm list packages > evidence/apps/packages.txt
 ```
 
 Collect third-party applications:
 
 ```bash
-$ adb shell pm list packages -3 evidence/apps/third_party_packages.txt
+adb> pm list packages -3 > evidence/apps/third_party_packages.txt
 ```
 
 Collect system applications:
 
 ```bash
-$ adb shell pm list packages -s evidence/apps/system_packages.txt
+adb> shell pm list packages -s > evidence/apps/system_packages.txt
 ```
 
 Collect running processes:
 
 ```bash
-$ adb shell ps -A evidence/apps/processes.txt
+adb shell ps -A > evidence/apps/processes.txt
 ```
 
 For a suspicious application:
 
 ```bash
-$ adb shell dumpsys package com.example.app evidence/apps/com.example.app_package.txt
+adb> shell dumpsys package com.example.app > evidence/apps/com.example.app_package.txt
 ```
 
 ```bash
-$ adb shell pm path com.example.app evidence/apps/com.example.app_apk_path.txt
+adb> shell pm path com.example.app > evidence/apps/com.example.app_apk_path.txt
 ```
