@@ -120,17 +120,17 @@ $ adb shell whoami
 Check the manufacturer:
 
 ```bash
-$ adb shell getprop ro.product.manufacturer
+adb> getprop ro.product.manufacturer
 ```
 
 Check the model:
 
 ```bash
-$ adb shell getprop ro.product.model
+adb> getprop ro.product.model
 ```
 
 Check the Android version:
 
 ```bash
-$ adb shell getprop ro.build.version.release
+adb> getprop ro.build.version.release
 ```

@@ -194,15 +194,13 @@ adb> dumpsys package com.example.app > evidence/apps/com.example.app_permissions
 Then review:
 
 ```bash
-grep -A 50 "requested permissions" \
-evidence/apps/com.example.app_permissions.txt
+$ grep -A 50 "requested permissions" evidence/apps/com.example.app_permissions.txt
 ```
 
 And:
 
 ```bash
-grep -A 50 "grantedPermissions" \
-evidence/apps/com.example.app_permissions.txt
+$ grep -A 50 "grantedPermissions" evidence/apps/com.example.app_permissions.txt
 ```
 
 This distinction is important because an application may request a permission without currently having it granted.
@@ -214,40 +212,35 @@ This distinction is important because an application may request a permission wi
 Create the permissions evidence directory:
 
 ```bash
-mkdir -p evidence/permissions
+$ mkdir -p evidence/permissions
 ```
 
 Collect all available permissions:
 
 ```bash
-adb shell pm list permissions -g \
-> evidence/permissions/all_permissions.txt
+adb shell pm list permissions -g evidence/permissions/all_permissions.txt
 ```
 
 For a suspicious application:
 
 ```bash
-adb shell dumpsys package com.example.app \
-> evidence/permissions/com.example.app.txt
+adb shell dumpsys package com.example.app evidence/permissions/com.example.app.txt
 ```
 
 Collect AppOps information:
 
 ```bash
-adb shell cmd appops get com.example.app \
-> evidence/permissions/com.example.app_appops.txt
+adb shell cmd appops get com.example.app evidence/permissions/com.example.app_appops.txt
 ```
 
 Collect accessibility configuration:
 
 ```bash
-adb shell settings list secure | grep -i accessibility \
-> evidence/permissions/accessibility.txt
+adb shell settings list secure | grep -i accessibility evidence/permissions/accessibility.txt
 ```
 
 Collect device policy information:
 
 ```bash
-adb shell dumpsys device_policy \
-> evidence/permissions/device_policy.txt
+adb shell dumpsys device_policy evidence/permissions/device_policy.txt
 ```

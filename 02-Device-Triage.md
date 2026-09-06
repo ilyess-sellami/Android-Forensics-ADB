@@ -179,59 +179,59 @@ $ mkdir -p evidence/device
 Collect device information:
 
 ```bash
-$ adb shell getprop > evidence/device/getprop.txt
+adb> getprop > evidence/device/getprop.txt
 ```
 
 Collect kernel information:
 
 ```bash
-$ adb shell uname -a > evidence/device/uname.txt
+adb> uname -a > evidence/device/uname.txt
 ```
 
 Collect device uptime:
 
 ```bash
-$ adb shell uptime > evidence/device/uptime.txt
+adb> uptime > evidence/device/uptime.txt
 ```
 
 Collect device date and time:
 
 ```bash
-$ adb shell date > evidence/device/date.txt
+adb> date > evidence/device/date.txt
 ```
 
 Collect battery information:
 
 ```bash
-$ adb shell dumpsys battery > evidence/device/battery.txt
+adb> dumpsys battery > evidence/device/battery.txt
 ```
 
 Collect storage information:
 
 ```bash
-$ adb shell df -h > evidence/device/storage.txt
+adb> df -h > evidence/device/storage.txt
 ```
 
 Collect network interfaces:
 
 ```bash
-$ adb shell ip addr > evidence/device/ip_addr.txt
+adb> ip addr > evidence/device/ip_addr.txt
 ```
 
 Collect routing information:
 
 ```bash
-$ adb shell ip route > evidence/device/ip_route.txt
+adb> ip route > evidence/device/ip_route.txt
 ```
 
 Collect DNS configuration:
 
 ```bash
-$ adb shell getprop | grep -i dns > evidence/device/dns.txt
+adb> getprop | grep -i dns > evidence/device/dns.txt
 ```
 
 Collect the HTTP proxy configuration:
 
 ```bash
-$ adb shell settings get global http_proxy > evidence/device/http_proxy.txt
+adb> settings get global http_proxy > evidence/device/http_proxy.txt
 ```
