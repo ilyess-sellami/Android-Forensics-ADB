@@ -41,26 +41,3 @@ This project aims to provide a practical workflow for:
 | 08 | Persistence Analysis  | Identify potential Android persistence mechanisms |
 | 09 | Log Analysis          | Collect and analyze Android logs                  |
 | 10 | APK Analysis          | Perform static analysis of suspicious APKs        |
-
----
-
-## Requirements
-
-### Analyst Workstation
-
-* Kali Linux
-* Android Debug Bridge (adb)
-* Python 3
-* Git
-* Optional Android analysis tools:
-    * JADX
-    * APKTool
-    * AAPT
-    * MobSF
-    * Wireshark
-
-### Android Device
-
-* Android device
-* USB debugging enabled
-* Authorized ADB connection
