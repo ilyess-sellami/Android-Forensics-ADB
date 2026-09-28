@@ -21,7 +21,6 @@ This project aims to provide a practical workflow for:
 * Network and connectivity investigation
 * Persistence detection
 * Log collection and analysis
-* APK acquisition and static analysis
 * Identification of potentially suspicious applications
 * Automated evidence collection and reporting
 
@@ -40,4 +39,3 @@ This project aims to provide a practical workflow for:
 | 07 | Network Forensics     | Analyze network configuration and connections     |
 | 08 | Persistence Analysis  | Identify potential Android persistence mechanisms |
 | 09 | Log Analysis          | Collect and analyze Android logs                  |
-| 10 | APK Analysis          | Perform static analysis of suspicious APKs        |
